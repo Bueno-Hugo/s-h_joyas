@@ -86,4 +86,226 @@ p{
 .menu a:hover{
     transform: translateY(18px);
     background-color: var(--purple--light);
+    color: var(--gray-light);
+    border-radius: 6px;
 }
+
+
+/*:::::::::::::::::Seccion Nosotros::::::::::::::::::::*/
+
+.nosotros{
+    margin-bottom: 60px;
+}
+
+.subtitle{
+    font-size: 1.25rem;
+    color: var(--purple-dark);
+    font-family: 'Noto Serif' , serif;
+    font-weight: 700;
+    z-index: 2;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.subtitulo span{
+    background-color: var(--gray-light);
+    padding: 0 15px;
+    z-index: 99;
+    position: relative;
+}
+
+.subtitulo::after{
+    content: "";
+    display: inline-block;
+    height: 2px;
+    width: 100%;
+    background: var(--purple-dark);
+    position: relative;
+    top: -48px;
+    z-index: 1;
+}
+
+.nosotros .titulo{
+    width: 70%;
+    font-size: 44px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 50px;
+}
+
+.nosotros .enlace{
+    display: inline-block;
+    margin-top: 40px;
+    color: var(--purple--light);
+    font-weight: 700;
+    border-bottom: 1px solid transparent;
+    transition: .5s  ease all ;
+}
+
+.nosotros  .enlace:hover{
+    text-decoration: none;
+    letter-spacing: 3px;
+    border-bottom: 1px solid var(--purple--light);
+}
+
+
+/*:::::::::::::::::Seccion Productos::::::::::::::::::::*/
+
+.productos{
+    background: var(--gray-light);
+    padding: 20px;
+    margin-bottom: 60px;
+}
+
+.productos .titulo{
+    width: 70%;
+    font-size: 44px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 50px;
+}
+
+
+.productos .producto{
+    position: relative;
+    width: 100%;
+}
+
+.productos .overlay{
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    bottom: 0%;
+    left: 0;
+    right: 0;
+    background: var(--purple--light);
+    overflow: hidden;
+    transition: .5s ease;
+}
+
+.productos  .producto:hover  .overlay{
+    width: 100%;
+    opacity: .8;
+}
+
+.productos  .producto .overlay-texto{
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    white-space: nowrap;/*Para que todo me lo coloque en una sola linea*/
+    color: var(--white);
+    font-size: 18px;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+
+
+.productos .btn-productos{
+    width: 50%;
+    margin-top: 30px;
+    background-color: var(--purple--light);
+    color: #fff;
+    padding: 7px 20px;
+    text-transform: uppercase;
+    font-size: 16px;
+    border: 2px solid transparent;
+    transition: .5s ease;
+    
+}
+
+
+.productos .btn-productos:hover{
+    background-color: transparent;
+    border: 2px solid var(--purple--light);
+    color: var(--purple--light);
+}
+
+/*::::::::::::::::Separador::::::::::::::::::::*/
+
+.separador{
+    width: 100%;
+    height: 250px;
+    background-image: url(../img/bg-separator.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;/*Efecto paralax*/
+    margin-bottom: 60px;
+}
+
+.separador p{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-family: 'Noto Serif' , serif;
+    padding: 10px;
+}
+
+
+/*::::::::::::::::Acerca De:::::::::::::::::::*/
+.acerca-de{
+    margin-bottom: 60px;
+}
+
+/*::::::::::::::::Galeria:::::::::::::::::::*/
+
+.galeria{
+    margin-bottom: 60px;
+}
+
+.galeria img{
+    width: 100%;
+    height: 100%;
+    object-fit:  ;/*Si la imagen no cabe, se acomode de  cierta forma qur se recorta pero sin perder su proporcion*/
+}
+
+/*::::::::::::::::Contactanos::::::::::::::::::*/
+.contacto{
+    margin-bottom: 60px;
+}
+
+/*:::::::::::::::Footer  Redes Sociales:::::::::::::::::::*/
+
+.redes-sociales{
+    padding: 10px;
+    background-color: var(--purple--light);
+}
+
+
+.redes-sociales  .icons{
+    font-size: 22px;
+    padding: 5px;
+    margin: 0 20px;
+    transition: .5s ease all;
+}
+
+.redes-sociales  .icons:hover{
+    transform: scale(1.7);
+}
+
+
+/*:::::::::::::::MEDIA QUERIES:::::::::::::::::::*/
+
+@media  screen and (max-width: 992px) {
+    p{
+        font-size: 16px;
+    }
+
+    .contenido-header .texto{
+        font-size: 60px;
+    }
+
+    .menu a{
+        font-size: 20px;
+    }
+
+    .nosotros .titulo, .productos .titulo{
+        font-size: 30px;
+    }
+
+}
+
